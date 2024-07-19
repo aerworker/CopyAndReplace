@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows;
 using CopyAndReplace.UI;
 using EnvDTE;
@@ -117,14 +118,19 @@ namespace CopyAndReplace.Implementation {
             using (var wrapper = this.OpenFile(item))
                 itemContent = wrapper.ReadAllText(allowCached: true);
 
-            return (
+            var result = (
                 from candidate in filesInClipboardWithContent
-                where item.Name.EndsWith(candidate.Key.Name, StringComparison.InvariantCultureIgnoreCase)
+                where RemoveCopySuffix(item.Name).EndsWith(candidate.Key.Name, StringComparison.InvariantCultureIgnoreCase)
                 where candidate.Value == itemContent
                 select candidate.Key
             ).FirstOrDefault();
+            return result;
         }
-        
+
+        private static string RemoveCopySuffix(string name) {
+            return Regex.Replace(name, @" - Copy( \(\d+\))?", "");
+        }
+
         private ITextFileWrapper OpenFile(ProjectItem item) {
             return fileFactory.OpenFrom((string)item.Properties.Item("FullPath").Value);
         }

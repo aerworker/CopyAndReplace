@@ -8,7 +8,7 @@ The basic idea is that sometimes it is much easier to start with a similar class
 ### Installation
 
 The extension can be installed from [Visual Studio Gallery](http://visualstudiogallery.msdn.microsoft.com/00590d25-79fe-483f-9f38-01d966da3517).  
-Supported VS versions: 2010 and 2012.
+Supported VS versions: 2019.
 
 ### Q&A
 
@@ -55,6 +55,9 @@ Supported VS versions: 2010 and 2012.
     No. But please feel free to create an issue if you feel it is important.
     
 ### Changelog
+
+#### 0.9.2
+Enabled support for VS 2019.
 
 #### 0.9.1
 Enabled support for VS 2012.

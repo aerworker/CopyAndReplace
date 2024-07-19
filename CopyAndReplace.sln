@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyAndReplace", "CopyAndReplace\CopyAndReplace.csproj", "{9D62303E-A27D-4467-93BC-A5F48BBDF2F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyAndReplace.Tests.Unit", "CopyAndReplace.Tests.Unit\CopyAndReplace.Tests.Unit.csproj", "{708BD233-AD4A-4BC0-895D-76616C54BEAA}"
@@ -22,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8CEE108-2780-45CB-97FD-5DCCF607DF33}
 	EndGlobalSection
 EndGlobal

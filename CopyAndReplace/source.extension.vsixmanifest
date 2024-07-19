@@ -1,29 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-  <Identifier Id="f6f2a4e2-b578-4e42-a3b8-7e12c7cb3092">
-    <Name>CopyAndReplace</Name>
-    <Author>Andrey Shchekin</Author>
-    <Version>0.9.1</Version>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="f6f2a4e2-b578-4e42-a3b8-7e12c7cb3092" Version="0.9.2" Language="en-US" Publisher="Andrey Shchekin" />
+    <DisplayName>CopyAndReplace</DisplayName>
     <Description xml:space="preserve">CopyAndReplace is a Visual Studio extension that gives you a chance to do rename and replace in files you have just copy/pasted. The basic idea is that sometimes it is much easier to start with a similar class and reduce/change it than to start with a blank file.</Description>
-    <Locale>1033</Locale>
-    <PreviewImage>screenshot.png</PreviewImage>
-    <InstalledByMsi>false</InstalledByMsi>
-    <SupportedProducts>
-      <VisualStudio Version="10.0">
-        <Edition>Pro</Edition>
-      </VisualStudio>
-      <VisualStudio Version="11.0">
-        <Edition>Pro</Edition>
-      </VisualStudio>
-    </SupportedProducts>
-    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
-  </Identifier>
-  <References>
-    <Reference Id="Microsoft.VisualStudio.MPF" MinVersion="10.0">
-      <Name>Visual Studio MPF</Name>
-    </Reference>
-  </References>
-  <Content>
-    <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
-  </Content>
-</Vsix>
+  </Metadata>
+  <Dependencies></Dependencies>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,18.0)" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="CopyAndReplace.pkgdef" />
+  </Assets>
+  <Installation InstalledByMsi="false">
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0,17.0)" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0,18.0)" >
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+  </Installation>
+</PackageManifest>
