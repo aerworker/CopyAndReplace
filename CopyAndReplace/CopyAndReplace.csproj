@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="17.0">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -43,12 +43,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AshMind.Extensions" Version="1.0.4" />
-    <PackageReference Include="EnvDTE" Version="8.0.2" PrivateAssets="all" />
-    <PackageReference Include="EnvDTE80" Version="8.0.2" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.VisualStudio.Shell.15.0" Version="16.7.30329.88" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.VisualStudio.Shell.Design" Version="16.7.30329.88" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.VisualStudio.ComponentModelHost" Version="16.6.255" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.VisualStudio.Designer.Interfaces" Version="1.1.4323" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.0.31902.203" ExcludeAssets="Runtime" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -81,6 +76,7 @@
     <SuppressFromVsix Include="System.Security.Principal.Windows.dll" Visible="false" />
     <SuppressFromVsix Include="System.Threading.AccessControl.dll" Visible="false" />
     <SuppressFromVsix Include="System.Threading.Tasks.Extensions.dll" Visible="false" />
+    <SuppressFromVsix Include="Microsoft.VisualStudio.DpiAwareness.dll" Visible="false" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="stdole">
